@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -17,16 +18,8 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
         
-        int max_arr = arr[0];
-        int min_arr = arr[0];
+        Arrays.sort(arr);
 
-        for (int i = 1; i < N; i++){
-            max_arr = Math.max(max_arr, arr[i]);
-            min_arr = Math.min(min_arr, arr[i]);
-        }
-
-        System.out.print(min_arr);
-        System.out.print(" ");
-        System.out.println(max_arr);
+        System.out.println(arr[0] + " " + arr[N-1]);
     }
 }
